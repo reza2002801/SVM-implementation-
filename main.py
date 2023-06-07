@@ -57,6 +57,7 @@ objective = cp.Minimize(c @ w)
 prob = cp.Problem(objective,constraints)
 
 
+
 prob.solve()
 
 
