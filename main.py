@@ -2,7 +2,7 @@ import cvxpy as cp
 import numpy as np
 import matplotlib.pyplot as plt
 
-white , black = input().strip().split('   ')
+white , black = input().strip().split(' ')
 
 white = int(white)
 black = int(black)
@@ -11,10 +11,10 @@ white_points = []
 black_points = []
 
 for i in range(white):
-    x, y = input().strip().split('   ')
+    x, y = input().strip().split(' ')
     white_points.append((float(x), float(y)))
 for i in range(black):
-    x, y = input().strip().split('   ')
+    x, y = input().strip().split(' ')
     black_points.append((float(x), float(y)))
 
 
@@ -66,7 +66,7 @@ prob.solve()
 plt.axline((0,(-1*b.value-(w.value[0]*0))/w.value[1]),(1 ,(-1*b.value-(w.value[0]*1))/w.value[1]))
 s1 = ((-1*b.value-(w.value[0]*1))/w.value[1])-(-1*b.value-(w.value[0]*0))/w.value[1]
 s2 = ((-1*b.value-(w.value[0]*0))/w.value[1])
-print(f'({s1},{s2})')
+print(f'({round(s1,4)},{round(s2,4)})')
 
 
 
